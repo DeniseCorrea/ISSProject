@@ -1,7 +1,11 @@
 import React from 'react';
 
+
 const WhereISS = () => (
-    <h1>WhereISS</h1>
+    <div>
+        <h1>WhereISS</h1>
+    </div>
 );
+
 
 export default WhereISS;

@@ -1,0 +1,31 @@
+
+
+footer {
+    display:flex;
+    justify-content:space-around;
+    background-color:black;
+}
+
+ul {
+    list-style-type:none;
+}
+
+.contact {
+    display:flex;
+}
+
+li{
+    padding-left:10px;
+    padding-right:10px;
+    color:white;
+}
+
+.social{
+    display:flex;
+}
+
+.selected {
+    color:gray;
+    font-weight: bold;
+   font-family: Helvetica, sans-serif;
+}

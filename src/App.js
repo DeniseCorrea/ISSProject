@@ -7,8 +7,8 @@ import Challenge from './Challenge.js';
 import Crew from './Crew.js';
 import Contact from './Contact.js';
 import Footer from './Footer.js';
-
 import './App.css';
+
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
         <Route exact path="/Challenge" component={Challenge} />
         <Route exact path="/Crew" component={Crew} />
         <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/Footer" component={Footer} />
       </Switch>
+      <Footer />
 
     </BrowserRouter>
   );
