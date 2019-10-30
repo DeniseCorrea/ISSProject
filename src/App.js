@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
-import Navbar from './Navbar.js';
+import NavigationBar from './NavigationBar.js';
 import Homepage from './Homepage.js';
 import SimpleExample from './WhereISS.js';
 import Challenge from './Challenge.js';
@@ -14,7 +14,8 @@ function App() {
   return (
 
     <BrowserRouter>
-      <Navbar />
+      
+      <NavigationBar />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/WhereISS" component={SimpleExample} />

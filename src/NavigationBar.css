@@ -1,0 +1,19 @@
+@media (min-width: 320px){
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        margin: 0 auto;
+        
+    }
+    .navbar-expand-lg .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row!important;
+        margin: 0 auto;
+        
+    }
+}
+
+
+
