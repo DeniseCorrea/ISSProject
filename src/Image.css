@@ -1,9 +1,29 @@
-.picture img {
-    display: flex;
-    height: 20%;
-    width: 80%;
-    overflow: visible
+.homepage {
+    background-color: black;
 }
 
+.image-picture {
+    align-items: center;
+}
+
+.image-picture img {
+    display: flex;
+    height: 60vw; 
+    align-items: center;
+}
+
+.image-title {
+    font-weight: bold;
+    text-align: center;
+    justify-content: space-around;
+    color: white;
+
+}
+
+.image-infos {
+    text-align: center;
+    justify-content: space-around;
+    color: white;
+}
 
 
