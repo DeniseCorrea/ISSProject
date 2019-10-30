@@ -10,20 +10,44 @@ const WhereISS = () => (
 import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import './WhereISS.css';
+import DisplayPosition from './DisplayPosition';
 
 
-export default class SimpleExample extends Component {
-    state = {
-        lat: 51.505,
-        lng: -0.09,
-        zoom: 3,
+class SimpleExample extends Component {
+        state = {
+            lat: 51.505,
+            lng: -0.09,
+            zoom: 3,
+        }
+    
+
+    getPosition = () => {
+        fetch ('http://api.open-notify.org/iss-now.json')
+        .then (response => response.json())
+        .then (data => {
+            this.setState({
+                lat: data.iss_position.latitude, 
+                lng: data.iss_position.longitude
+            })
+        })
     }
+
+    componentDidMount() {
+        const fetchInfo = ()=> {
+            this.getPosition();
+        };
+        setInterval(fetchInfo, 8000);
+    }
+
 
     render() {
         const position = [this.state.lat, this.state.lng]
         return (
+            <div className="Where">
+                <DisplayPosition lat={this.state.lat} lng={this.state.lng}/>
             <div className="map">
-                <Map center={position} zoom={this.state.zoom}>
+                <Map center={{lat: this.state.lat, lng: this.state.lng}} 
+                        zoom={this.state.zoom}>
                     <TileLayer
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -35,6 +59,11 @@ export default class SimpleExample extends Component {
                     </Marker>
                 </Map>
             </div>
+        </div>
         )
     }
 }
+
+
+
+export default SimpleExample 
