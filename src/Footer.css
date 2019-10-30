@@ -1,14 +1,16 @@
 
 
-footer {
+.footer {
     display:flex;
     justify-content:space-around;
-    background-color:black;
-
+    
+    
 }
 
 ul {
+    display:flex;
     list-style-type:none;
+    
 }
 
 .contact {
@@ -18,7 +20,8 @@ ul {
 li{
     padding-left:10px;
     padding-right:10px;
-    color:white;
+
+    
 }
 
 .social{
@@ -28,5 +31,11 @@ li{
 .selected {
     color:gray;
     font-weight: bold;
-   font-family: Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
+}
+
+.footer img {
+    height:30px;
+    width:30px;
+   
 }
