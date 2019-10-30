@@ -10,7 +10,7 @@ const Navbar = () => (
             <li><NavLink exact to="/Challenge" activeClassName="selected">Challenge</NavLink></li>
             <li><NavLink exact to="/Crew" activeClassName="selected">Crew</NavLink></li>
             <li><NavLink exact to="/Contact" activeClassName="selected">Contact</NavLink></li>
-            <li><NavLink exact to="/Footer" activeClassName="selected">Footer</NavLink></li>
+
         </ul>
     </nav>
 );
