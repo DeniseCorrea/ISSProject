@@ -36,6 +36,9 @@ class Image extends React.Component {
   render () {
       return (
         <div className="homepage">
+            <div className="homepage-title">
+                <h1>Fly By</h1>
+            </div>
             <div className="image-title">
                 <p>{this.state.title}</p>
             </div>
