@@ -3,6 +3,8 @@
 .footer {
     display:flex;
     justify-content:space-around;
+    padding-top: 20px;
+    background-color:gray;
     
     
 }
@@ -17,9 +19,11 @@ ul {
     display:flex;
 }
 
-li{
+li {
     padding-left:10px;
     padding-right:10px;
+    color:black;
+  
 
     
 }
@@ -39,3 +43,4 @@ li{
     width:30px;
    
 }
+
