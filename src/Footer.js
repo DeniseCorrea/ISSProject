@@ -7,12 +7,12 @@ const Footer = () => (
     <>
         <div className="footer">
             <ul className="contact">
-                <li><NavLink exact to="/Contact" activeClassName="selected">Contact</NavLink></li>
-                <li><NavLink exact to="/Contact" activeClassName="selected">About us</NavLink></li>
+                <li><NavLink exact to="/Contact" >Contact</NavLink></li>
+                <li><NavLink exact to="/Contact" >About us</NavLink></li>
             </ul>
             <ul className="social">
-                <li><img src="https://image.flaticon.com/icons/png/512/87/87390.png" alt=""></img></li>
-                <li><img src="https://image.flaticon.com/icons/png/512/59/59439.png" alt=""></img></li>
+                <li><a href="#"><img src="https://image.flaticon.com/icons/png/512/87/87390.png" alt=""></img></a></li>
+                <li><a href="#"><img src="https://image.flaticon.com/icons/png/512/59/59439.png" alt=""></img></a></li>
             </ul>
         </div>
     </>
