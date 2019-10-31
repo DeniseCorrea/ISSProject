@@ -1,29 +1,40 @@
 .homepage {
+    display: flex;
+    flex-direction: column;
     background-color: black;
 }
 
 .image-picture {
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
 }
 
 .image-picture img {
-    display: flex;
-    height: 60vw; 
-    align-items: center;
+    height: 40vw; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0% 2% 0% 2%;;
 }
 
-.image-title {
+.image-title {    
     font-weight: bold;
     text-align: center;
-    justify-content: space-around;
     color: white;
-
+    padding: 2% 0% 0% 2%;
 }
 
-.image-infos {
+.homepage-title {
+    font-weight: bold;
     text-align: center;
-    justify-content: space-around;
     color: white;
+    padding: 2% 0% 0% 2%;
+}
+
+.image-infos {    
+    text-align: center;
+    color: white;
+    padding: 0% 2% 0% 2%;
 }
 
 
