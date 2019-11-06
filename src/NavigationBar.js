@@ -23,6 +23,9 @@ class NavigationBar extends Component {
                 <NavLink exact to="/Challenge" activeClassName="d-inline p-2 text-white">Challenge</NavLink>
             </Nav.Item>
             <Nav.Item>
+                <NavLink exact to="/Sighting" activeClassName="d-inline p-2 text-white">Sighting</NavLink>
+            </Nav.Item>
+            <Nav.Item>
                 <NavLink exact to="/Crew" activeClassName="d-inline p-2 text-white">Crew</NavLink>
             </Nav.Item>
             <Nav.Item>
