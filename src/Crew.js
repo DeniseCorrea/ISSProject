@@ -67,12 +67,14 @@ class Crew extends Component {
                             {CrewInfos.map((info) =>  (
                                 <div>
                                     <div className="Infos">
-                                        <a href={info.biolink} target="_blank"> 
+                                        <a href={info.biolink} target="_blank" rel="noopener noreferrer"> 
                                         {/* <img src={info.biophoto} height={info.biophotoheight} width={info.biophotowidth} className="biopic" /> */}
                                         <h2>{info.name}</h2>
                                         {/* {info.country} */}
-                                        <img src={info.countryflag} className="flag" />
+                                        <div className="align">
+                                        <img src={info.countryflag} className="flag" alt="" />
                                         <h3>{info.title}</h3> 
+                                        </div>
                                         </a>
                                     </div>
                                     <div className="Days">
