@@ -1,3 +1,76 @@
-ul li{
-    color: black;
+.listing {
+    display: block;
+    font-family: Times;
+    font: inherit;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 16px;
+    padding-bottom: 72px;
+    text-size-adjust: 100%;
+    text-align: center;
+    padding: 72px;
+    /* vertical-align: baseline; */
 }
+
+.listing .Infos {
+    width: 70%;
+    float: left;
+}
+
+.Infos h2 {
+    font-weight: 300;
+    color: black;
+    font-size: 40px;
+    padding-bottom: 12px;
+}
+
+.flag {
+    width: 25px;
+    height: 13px;
+    float: center;
+    margin-right: 20px;
+    box-shadow: black 1px 1px 3px;
+    
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: gray;
+    padding-top: 0px;
+}
+
+
+
+
+
+
+
+
+/* ul {
+    margin: 0;
+    padding: 0;
+    float: center;
+    text-align: center;
+}
+
+.Crew{
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    list-style: none;
+    justify-content: center ;
+
+    
+}
+
+ul li h2 {
+    padding: .2em 1em;
+    background-color: cadetblue;
+}
+
+ul li h2:hover {
+    color: gray; */
+
+/* } */
