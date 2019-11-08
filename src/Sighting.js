@@ -59,7 +59,7 @@ class Sighting extends React.Component {
                 return '' + date;
         }
 
-        const secondsToHms = (d) => {
+        const secondsToMs = (d) => {
             d = Number(d);
             let m = Math.floor(d % 3600 / 60);
             let s = Math.floor(d % 3600 % 60);
@@ -73,18 +73,18 @@ class Sighting extends React.Component {
         return (
             <div className="sighting">
                 <div className="sighting-title">
-                    <h1>Sighting</h1>
+                    <h1>Sighting Opportunities</h1>
                 </div>
                 <div className="sighting-infos">
-                    <ul>
+                    <div>
                         {passTimes.map((passTime) => {
                             return (
                                 <div>
-                                    {secondsToHms(passTime.duration)} <span>{formatRisetime(passTime.risetime)}</span>
+                                    {formatRisetime(passTime.risetime)} <span>{secondsToMs(passTime.duration)}</span>
                                 </div>
                             )
                         })}
-                    </ul>
+                    </div>
                 </div>      
             </div>
         )
