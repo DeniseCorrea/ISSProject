@@ -1,42 +1,74 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Nav, Navbar } from 'react-bootstrap';
+import ResponsiveMenu from 'react-responsive-navbar';
+import styled from 'styled-components';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './NavigationBar.css';
+
+
+const Menu = styled.div`
+  border-bottom: 4px solid MediumPurple;
+  background-color: black;
+  ul {
+    padding-top: 20px;
+  }
+  li {
+    display: inline;
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 30px;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 23px;
+    color: MediumPurple;
+    }
+
+    a:hover {
+        color: white;
+        background-color: black;  
+    }
+  
+  @media (max-width: 750px) {
+    padding: 10px 0;
+    li {
+      padding: 10px 0;
+      display: block;
+      margin-left: 0;
+    }
+  }
+`;
+
+
 
 
 class NavigationBar extends Component {
     render(){
         return (
-        <Navbar bg="dark" expand="lg">
-        <Navbar.Brand href="/">Code Life</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-
-            <Nav.Item>
-                <NavLink exact to="/" activeClassName="d-inline p-2 text-white">Homepage</NavLink>
-            </Nav.Item>
-            <Nav.Item>
-                <NavLink exact to="/WhereISS" activeClassName="d-inline p-2 text-white">WhereISS</NavLink>
-            </Nav.Item>
-            <Nav.Item>
-                <NavLink exact to="/Challenge" activeClassName="d-inline p-2 text-white">Challenge</NavLink>
-            </Nav.Item>
-            <Nav.Item>
-                <NavLink exact to="/Sighting" activeClassName="d-inline p-2 text-white">Sighting</NavLink>
-            </Nav.Item>
-            <Nav.Item>
-                <NavLink exact to="/Crew" activeClassName="d-inline p-2 text-white">Crew</NavLink>
-            </Nav.Item>
-            <Nav.Item>
-                <NavLink exact to="/Contact" activeClassName="d-inline p-2 text-white">Contact</NavLink>
-            </Nav.Item>
-
-        </Nav>
-        </Navbar.Collapse>
-        </Navbar>
-   
-        )
+        <div>
+            <ResponsiveMenu
+              menuOpenButton={<FaBars size={45} color="MediumPurple" />}
+              menuCloseButton={<FaTimes size={45} color="MediumPurple" />}
+              changeMenuOn="750px"
+              largeMenuClassName="large-menu"
+              smallMenuClassName="small-menu"
+              menu={
+                <Menu>
+                  <ul>
+                    <li><NavLink exact to="/" activeClassName="active">Homepage</NavLink></li>
+                    <li><NavLink exact to="/WhereISS" activeClassName="selected">WhereISS</NavLink></li>
+                    <li><NavLink exact to="/Challenge" activeClassName="selected">Challenge</NavLink></li>
+                    <li><NavLink exact to="/Sighting" activeClassName="selected">Sighting</NavLink></li>
+                    <li><NavLink exact to="/Crew" activeClassName="selected">Crew</NavLink></li>
+                    <li><NavLink exact to="/Contact" activeClassName="selected">Contact</NavLink></li>
+                  </ul>
+                </Menu>
+              }
+            />
+        </div>
+        );  
     }
 }
+    
 export default NavigationBar;
