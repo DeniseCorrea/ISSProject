@@ -1,11 +1,11 @@
 .leaflet-container {
-    height:80%;
-    
+    height:80%;    
 }
 
 .background{
     background-color:black;
 }
+
 .wheretitle{
    text-align:center;
    background-color:black;

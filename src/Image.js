@@ -10,6 +10,7 @@ class Image extends React.Component {
         title:'',
         explanation: '',
         url: '',
+        isLoading: true,
         }
     }
 
@@ -28,12 +29,24 @@ class Image extends React.Component {
                 title: data.title,
                 explanation: data.explanation,
                 url: data.url,
+                isLoading: false,
             })
         })
     }
 
   
     render () {
+
+        const { isLoading } = this.state;
+
+        if (isLoading) {
+            return (
+                <p>
+                    Loading
+                </p>
+            )
+        } 
+        
         return (
             <div className="homepage">
                 <div className="homepage-title">
