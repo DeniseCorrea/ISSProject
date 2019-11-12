@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import './WhereISS.css';
 import DisplayPosition from './DisplayPosition';
-import L from 'leaflet'
+import L from 'leaflet';
 
 
 class SimpleExample extends Component {
@@ -18,7 +18,6 @@ class SimpleExample extends Component {
         }
 
     }
-
 
 
     getPosition = () => {
