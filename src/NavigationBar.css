@@ -15,5 +15,14 @@
     }
 } */
 
+.logo {
+    height: 110px;
+    align-content: left;
+}
+
+.logo:hover img {
+    transform: scale(1.5)!important;
+}
+
 
 
