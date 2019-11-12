@@ -69,9 +69,9 @@ class SimpleExample extends Component {
                 <h1 className="wheretitle">Where is ISS right now?</h1>
 
                 <div className="Where">
-
+                
                     <div className="buttons">
-
+                    <h6>Choose your map:</h6>
                         <div>
                             <button onClick={this.tileLayer}>
                                 <img src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" alt="" />
@@ -114,7 +114,7 @@ class SimpleExample extends Component {
 
                     <div className="video">
                         <p>Live Stream from ISS (sound and image)</p>
-                        <iframe width="360" height="270" src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style={{ "border": "none" }} title="iss"></iframe>
+                        <iframe width="360" height="300" src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style={{ "border": "none" }} title="iss"></iframe>
                     </div>
 
                 </div>
