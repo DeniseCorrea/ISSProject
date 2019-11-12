@@ -1,0 +1,24 @@
+.sighting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.sighting-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.sighting-infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       
+
+
+}
