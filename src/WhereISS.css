@@ -10,6 +10,7 @@
    text-align:center;
    background-color:black;
    color:white;
+  
 }
 
 .map{
@@ -22,16 +23,21 @@
 .map1{
     border-radius:7%;
 }
-    @media (max-width: 950px){
+
+@media (max-width: 950px){
     .map{
         height:400px;
         width:360px;
+        padding-bottom:50px;
         }
 
     .buttons{
         display:flex;
+        position:absolute;
+        z-index:20!important;
+              
     }
-    }
+}
  
  button img{
     border-radius:50%;
@@ -47,10 +53,7 @@
    
  }
 
- .buttons {
-    padding-top:180px;
- }
-
+ 
  
 .Where{
     justify-content: space-around;
@@ -59,6 +62,7 @@
     color:white;
     width:100%;  
     text-align:center;
+    align-items: center;
     
 }
 
@@ -71,6 +75,6 @@
 }
 
 .video{
-    padding-top:100px;
+    
     text-align:center;
 }

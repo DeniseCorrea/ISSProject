@@ -7,7 +7,7 @@ import Challenge from './Challenge.js';
 import Crew from './Crew.js';
 import Contact from './Contact.js';
 import Footer from './Footer.js';
-import './App.css';
+
 
 
 function App() {
