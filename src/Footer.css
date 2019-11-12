@@ -1,31 +1,25 @@
 
-
 .footer {
     display:flex;
     justify-content:space-around;
     padding-top: 20px;
     background-color:gray;
     
-    
 }
 
 .footer ul {
     display:flex;
-    list-style-type:none;
-    
+    list-style-type:none;    
 }
 
 .contact {
     display:flex;
 }
 
-.footer li {
+.footer li a{
     padding-left:10px;
     padding-right:10px;
-    color:black;
-  
-
-    
+    color:black;  
 }
 
 .social{

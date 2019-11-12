@@ -75,12 +75,20 @@ class Sighting extends React.Component {
                 <div className="sighting-title">
                     <h1>Sighting Opportunities</h1>
                 </div>
+                <div className="sighting-subtitle">
+                    <p> These are the next ISS sighting opportunities from your location  </p>
+                </div>
                 <div className="sighting-infos">
                     <div>
                         {passTimes.map((passTime) => {
                             return (
-                                <div>
-                                    {formatRisetime(passTime.risetime)} <span>{secondsToMs(passTime.duration)}</span>
+                                <div className="sighting-data"> 
+                                    <div className="sighting-passes">
+                                        <p>Date and hour: <span> {formatRisetime(passTime.risetime)} </span></p> 
+                                    </div>
+                                    <div className="sighting-duration">
+                                        <p>Duration: <span> {secondsToMs(passTime.duration)} </span></p> 
+                                    </div>
                                 </div>
                             )
                         })}
