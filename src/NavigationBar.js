@@ -11,6 +11,7 @@ const Menu = styled.div`
   background-color: black;
   ul {
     padding-top: 20px;
+    padding-left: 0;
   }
   li {
     display: inline;
@@ -32,12 +33,14 @@ const Menu = styled.div`
   
   @media (max-width: 750px) {
     padding: 10px 0;
+    
     li {
       padding: 10px 0;
       display: block;
       margin-left: 0;
     }
   }
+
 `;
 
 
@@ -56,7 +59,7 @@ class NavigationBar extends Component {
               menu={
                 <Menu>
                   <ul>
-                    <li><NavLink exact to="/" activeClassName="active">Homepage</NavLink></li>
+                    <li><NavLink exact to="/" activeClassName="active"><img src="https://res.cloudinary.com/dzvkdhu9c/image/upload/v1573582930/ISS/ee100ff4-c375-4258-9e2d-de5ee7240801_200x200_pguolh.png" className="logo"/></NavLink></li>
                     <li><NavLink exact to="/WhereISS" activeClassName="selected">WhereISS</NavLink></li>
                     <li><NavLink exact to="/Challenge" activeClassName="selected">Challenge</NavLink></li>
                     <li><NavLink exact to="/Sighting" activeClassName="selected">Sighting</NavLink></li>
