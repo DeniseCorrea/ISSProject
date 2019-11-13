@@ -3,34 +3,39 @@
     display:flex;
     justify-content:space-around;
     padding-top: 20px;
-    background-color:gray;
+    background-color:#000;
     
 }
 
 .footer ul {
     display:flex;
     list-style-type:none;    
+    text-align:center;
 }
 
 .contact {
     display:flex;
+   
 }
 
 .footer li a{
     padding-left:10px;
     padding-right:10px;
-    color:black;  
+    color:#FFF;  
 }
+
+.footer li a:hover{
+    background-color:#000;
+    font-weight:bold;
+   
+}
+
 
 .social{
     display:flex;
 }
 
-.selected {
-    color:gray;
-    font-weight: bold;
-    font-family: Helvetica, sans-serif;
-}
+
 
 .footer img {
     height:30px;
@@ -38,3 +43,6 @@
    
 }
 
+.footer .contact div{
+    width:100px;
+}

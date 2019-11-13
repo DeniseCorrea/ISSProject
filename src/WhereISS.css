@@ -9,14 +9,15 @@
 .wheretitle{
    text-align:center;
    background-color:black;
-   color:white;
+   color:#FFF;
+   font-size: 60px;
   
 }
 
 .map{
-    margin-top:50px;
-    height:500px;
-    width:600px;
+    margin-bottom:40px;
+    height:400px;
+    width:500px;
     
 }
 
@@ -28,29 +29,43 @@
     .map{
         height:400px;
         width:360px;
-        padding-bottom:50px;
+        padding-bottom:80px;
         }
 
     .buttons{
         display:flex;
         position:absolute;
-        z-index:20!important;
-              
+                            
     }
+    .wheretitle{
+        font-size:30px;
+    }
+
+    .Where{
+        flex-direction:column;
+    }
+
 }
  
- button img{
+.buttons img{
     border-radius:50%;
     margin:auto;
     height:50px;
     width:50px;
-   
+    
  }   
 
- button {
-   background-color:black;
-   display:inline-flex;
+ .choose2 {
+    background-color:#000;
+    display:inline-flex;
    
+ }
+
+ .imperial{
+     color:gray;
+     font-size:10px;
+     background-color:#000;
+     
  }
 
  
@@ -59,22 +74,56 @@
     justify-content: space-around;
     display:flex;
     background-color:black;
-    color:white;
+    color:gray;
     width:100%;  
     text-align:center;
     align-items: center;
+   
     
 }
 
-
-
-@media screen and (max-width: 950px){
-    .Where{
-        flex-direction:column;
-    }
+.loading{
+    background-color:#000;
+    color:#FFF;
+    font-weight:bold;
+    font-size:40px;
+    height:100vw;
+    
 }
+
+.searching{
+    height:80px;
+}
+
+
 
 .video{
     
     text-align:center;
+}
+
+.gif1{
+    width: 80%;
+    height:37%;   
+}
+#root {
+    text-align:center;
+}
+
+.choose{
+    font-size:10px;
+}
+
+.speed{
+    display:flex;
+    margin-left:40px;
+}
+
+.speed button{
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.selected{
+    background-color:blue;
 }
