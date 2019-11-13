@@ -4,6 +4,7 @@
 
 .Crew {
     height: 100%;
+    background-color: black;
 }
 
 .CrewList {
@@ -23,7 +24,7 @@
     line-height: 16px;
     text-size-adjust: 100%;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 5%;
     padding-right: 22%;
     padding-left: 22%;
     padding-bottom: 15%;
@@ -31,7 +32,11 @@
 }
 
 h1 {
+    font-family:Titan One;
     text-align: center;
+    color: white;
+    padding-top: 7%;
+    font-size: 4.0rem!important;
     
 }
 
@@ -49,7 +54,7 @@ a:hover, a:visited, a:link, a:active {
 
 .Infos h2 {
     font-weight: 300;
-    color: black;
+    color:white;
     font-size: 40px;
     padding-bottom: 10px;
 }
@@ -96,6 +101,7 @@ h4 {
     font-size: 30px;
     padding-bottom: 3px;
     text-align: right;
+    color: white;
 }
 
 .Infos p {
@@ -104,9 +110,11 @@ h4 {
     font-size: 18px;
     text-transform: uppercase;
     text-align: center;
-
 }
 
+p {
+    color: #59757d;
+}
 
 a:hover{
     background: #f6f4f5;
