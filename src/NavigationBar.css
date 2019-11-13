@@ -15,14 +15,19 @@
     }
 } */
 
+body {
+    background-color: black!important;
+}
+
 .logo {
-    height: 110px;
-    align-content: left;
+    height: 85px;
+    
+    
+    
 }
 
-.logo:hover img {
-    transform: scale(1.5)!important;
+@media (max-width: 788px) {
+    .logo {
+        display: none;
+    }
 }
-
-
-
