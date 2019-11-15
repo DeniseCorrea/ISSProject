@@ -2,7 +2,7 @@
   "name": "iss-location",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DeniseCorrea.github.io/ISSProject",
+  "homepage": "https://denisecorrea.github.io/ISSProject",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-switch-button-react": "^1.1.0",

@@ -26,7 +26,7 @@ class SimpleExample extends Component {
 
 
     getPosition = () => {
-        fetch('http://api.open-notify.org/iss-now.json')
+        fetch('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json')
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -87,7 +87,7 @@ class SimpleExample extends Component {
         if (isLoading) {
             return (
                 <div className='loading'>
-                    <img className='gif1' width='80%' height='35%' src="/img/iss.gif" alt='' />
+                    <img className='gif1' width='80%' height='35%' src="./img/iss.gif" alt='' />
                     <p className='searching'>SEARCHING...</p>
                 </div>
             )
@@ -146,10 +146,10 @@ class SimpleExample extends Component {
                                 <img src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" alt="" />
                             </button>
                             <button onClick={this.tileLayer2}>
-                                <img src="/img/map2.png" alt='' />
+                                <img src="./img/map2.png" alt='' />
                             </button>
                             <button onClick={this.tileLayer3}>
-                                <img src='/img/map1.png' alt='' />
+                                <img src='./img/map1.png' alt='' />
                             </button>
                            
                         </div>
