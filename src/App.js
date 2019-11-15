@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { Switch, HashRouter, Route } from 'react-router-dom';
 import NavigationBar from './NavigationBar.js';
 import Homepage from './Homepage.js';
 import SimpleExample from './WhereISS.js';
@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
 
-    <BrowserRouter basename="/ISSProject">
+    <HashRouter basename="/">
       <NavigationBar />
       <Switch>
         <Route exact path="/" component={Homepage} />
@@ -26,13 +26,8 @@ function App() {
         <Route exact path="/Contact" component={Contact} />
       </Switch>
       <Footer />
-    </BrowserRouter>
-
-
-
+    </HashRouter>
   );
-
-
 }
 
 export default App;
