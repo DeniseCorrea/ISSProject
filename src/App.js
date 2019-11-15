@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
 
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/ISSProject">
       <NavigationBar />
       <Switch>
         <Route exact path="/" component={Homepage} />
