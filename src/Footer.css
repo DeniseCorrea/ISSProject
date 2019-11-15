@@ -2,25 +2,26 @@
 .footer {
     display:flex;
     justify-content:space-around;
-    padding-top: 20px;
     background-color:#000;
+    
     
 }
 
 .footer ul {
     display:flex;
     list-style-type:none;    
-    text-align:center;
+    
 }
 
 .contact {
     display:flex;
+    padding-left:0;
    
 }
 
 .footer li a{
     padding-left:10px;
-    padding-right:10px;
+    padding-right:20px;
     color:#FFF;  
 }
 
@@ -46,3 +47,4 @@
 .footer .contact div{
     width:100px;
 }
+
