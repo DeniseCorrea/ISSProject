@@ -31,7 +31,7 @@ class Challenge extends React.Component {
     render() {
         return (
             <div className="challenge-container">
-                <div className="challenge-title">Challenge</div>
+                <h1>Challenge</h1>
                     {this.state.responses < 5 && 
                         this.state.questions.map (
                         ({ question, answers, correct, questionID }) => (
