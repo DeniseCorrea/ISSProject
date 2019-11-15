@@ -10,7 +10,7 @@ const Menu = styled.div`
   border-bottom: 4px solid #b2ebf9;
   background-color: black;
   ul {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 0;
   }
   li {
@@ -28,7 +28,8 @@ const Menu = styled.div`
 
     a:hover {
         color: white;
-        background-color: black;  
+        background-color: black; 
+        text-decoration: none; 
     }
 
     

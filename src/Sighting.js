@@ -46,11 +46,13 @@ class Sighting extends React.Component {
     render () {
         const { passTimes, isLoading } = this.state;
 
+
         if (isLoading) {
             return (
-                <p>
-                    Loading
-                </p>
+                <div className='loading'>
+                    <img className='gif1' width='80%' height='35%' src="/img/iss.gif" />
+                    <p className='searching'>SEARCHING...</p>
+                </div>
             )
         } 
 
@@ -69,34 +71,28 @@ class Sighting extends React.Component {
             return mDisplay + sDisplay; 
         }
 
-
         return (
-            <div className="sighting">
-                <div className="sighting-title">
-                    <h1>Sighting Opportunities</h1>
-                </div>
-                <div className="sighting-subtitle">
-                    <p> These are the next ISS sighting opportunities from your location  </p>
-                </div>
-                <div className="sighting-infos">
-                    <div>
-                        {passTimes.map((passTime) => {
-                            return (
-                                <div className="sighting-data"> 
-                                    <div className="sighting-passes">
-                                        <p>Date and hour: <span> {formatRisetime(passTime.risetime)} </span></p> 
+            <div className="maincontent">
+                <div className="sighting-board">
+                    <div className="sighting-infos">
+                        <h1 className="sighting-title"> Spot ISS </h1>
+                                {passTimes.map((passTime) => {
+                                return(
+                                    <div className="sighting-list">
+                                        <ul>
+                                            <li>{formatRisetime(passTime.risetime)} – Duration: {secondsToMs(passTime.duration)} </li> 
+                                        </ul>
                                     </div>
-                                    <div className="sighting-duration">
-                                        <p>Duration: <span> {secondsToMs(passTime.duration)} </span></p> 
-                                    </div>
-                                </div>
-                            )
-                        })}
+                                )
+                            })} 
                     </div>
-                </div>      
+                    <div className="sighting-div-image">
+                        <img className="sighting-image" src='./rsz_sighting.png' alt=''/>
+                    </div>
+                </div>
             </div>
         )
     }
 };
 
-export default Sighting;
+export default Sighting
