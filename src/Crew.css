@@ -92,6 +92,7 @@ h1 {
   display: flex;
   margin: auto;
   width: 100%;
+  padding-bottom: 30px;
   border-bottom: 1.5px groove #b2ebf9;
 }
 
@@ -136,6 +137,15 @@ h3 {
   text-decoration: none !important;
   background-color: black;
 }
+
+@media (max-width: 825px) {
+    .inSpace,
+    .Since,
+    h4 {
+        display: none;
+    }
+}
+
 
 /* ul {
     margin: 0;
