@@ -50,7 +50,7 @@ class Sighting extends React.Component {
         if (isLoading) {
             return (
                 <div className='loading'>
-                    <img className='gif1' width='80%' height='35%' src="/img/iss.gif" />
+                    <img className='gif1' width='80%' height='35%' src="./img/iss.gif" />
                     <p className='searching'>SEARCHING...</p>
                 </div>
             )

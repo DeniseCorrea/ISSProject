@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
 
-    <HashRouter basename="/">
+    <HashRouter basename="/ISSProject">
       <NavigationBar />
       <Switch>
         <Route exact path="/" component={Homepage} />
