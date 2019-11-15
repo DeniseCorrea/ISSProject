@@ -5,6 +5,8 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import './WhereISS.css';
 import DisplayPosition from './DisplayPosition';
 import L from 'leaflet';
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+
 
 
 class SimpleExample extends Component {
@@ -13,7 +15,7 @@ class SimpleExample extends Component {
         this.state = {
             lat: '',
             lng: '',
-            zoom: 1,
+            zoom: 2,
             url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
             speed: 27600,
             speedunits: 'kmh',
@@ -101,47 +103,33 @@ class SimpleExample extends Component {
 
 
         return (
-            <div className="background">
+            <div className="maincontent">
                 <h1 className="wheretitle">Where is ISS right now?</h1>
+
+                <div className='speed'>
+                    <DisplayPosition className="display" lat={this.state.lat} lng={this.state.lng} />
+                    <p className='orbits'> Orbits per day: 15.54 // Speed: {this.state.speed} {this.state.speedunits}</p>
+                    <div className='toggle'>
+                                <BootstrapSwitchButton
+                                    onstyle="outline-dark" offstyle="outline-dark" 
+                                    width={100} height={10}
+                                    checked={false}
+                                    size="xs" 
+                                    onlabel='Imperial'
+                                    offlabel='Metric'
+                                    onChange={this.speedconversion}>
+
+                                </BootstrapSwitchButton>
+                            </div>
+                </div>
 
                 <div className="Where">
 
-                    <div className="buttons">
-                        <h6 className='choose'>Choose your map:</h6>
-                        <div>
-                            <button className='choose2' onClick={this.tileLayer}>
-                                <img src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" alt="" />
-                            </button>
-                        </div>
-                        <div>
-                            <button className='choose2' onClick={this.tileLayer2}>
-                                <img src="/img/map2.png" alt='' />
-                            </button>
-                        </div>
-                        <div>
-                            <button className='choose2' onClick={this.tileLayer3}>
-                                <img src='/img/map1.png' alt='' />
-                            </button>
-                        </div>
-
-                    </div>
-
-
                     <div className="map">
 
-                        <DisplayPosition className="display" lat={this.state.lat} lng={this.state.lng} />
-                        <div className='speed'>
-                        <p>Orbits per day: 15.54 // Speed: {this.state.speed} {this.state.speedunits}</p>
-                        <button className='imperial' 
-                            onClick={this.speedconversion}>{this.state.speedunits === 'kmh' ? 'Imperial notation'  : 'Metric notation'}
-                        </button>
-                        </div>
-                        
                         <Map className="map1" center={{ lat: this.state.lat, lng: this.state.lng }}
                             zoom={this.state.zoom}>
                             <TileLayer
-
-
                                 url={this.state.url}
                             />
                             <Marker position={position} icon={icon}>
@@ -153,11 +141,24 @@ class SimpleExample extends Component {
 
                         </Map>
 
+                        <div className='choosemap'>
+                            <button onClick={this.tileLayer}>
+                                <img src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" alt="" />
+                            </button>
+                            <button onClick={this.tileLayer2}>
+                                <img src="/img/map2.png" alt='' />
+                            </button>
+                            <button onClick={this.tileLayer3}>
+                                <img src='/img/map1.png' alt='' />
+                            </button>
+                           
+                        </div>
+
                     </div>
 
                     <div className="video">
-                        <p>Live Stream from ISS (sound and image)</p>
-                        <iframe width="360" height="300" src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowFullScreen style={{ "border": "none" }} title="iss"></iframe>
+
+                        <iframe src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowFullScreen style={{ "border": "none" }} title="iss"></iframe>
                     </div>
 
                 </div>

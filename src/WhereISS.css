@@ -1,9 +1,12 @@
-.leaflet-container {
-    height:80%;    
+.loading{
+    background-color:#000;
+    color:#FFF;
+    font-weight:bold;
+    font-size:40px;    
 }
 
-.background{
-    background-color:black;
+.gif1{
+    height:60vh;
 }
 
 .wheretitle{
@@ -11,119 +14,146 @@
    background-color:black;
    color:#FFF;
    font-size: 60px;
-  
-}
-
-.map{
-    margin-bottom:40px;
-    height:400px;
-    width:500px;
-    
-}
-
-.map1{
-    border-radius:7%;
-}
-
-@media (max-width: 950px){
-    .map{
-        height:400px;
-        width:360px;
-        padding-bottom:80px;
-        }
-
-    .buttons{
-        display:flex;
-        position:absolute;
-                            
-    }
-    .wheretitle{
-        font-size:30px;
-    }
-
-    .Where{
-        flex-direction:column;
-    }
-
-}
- 
-.buttons img{
-    border-radius:50%;
-    margin:auto;
-    height:50px;
-    width:50px;
-    
- }   
-
- .choose2 {
-    background-color:#000;
-    display:inline-flex;
-   
- }
-
- .imperial{
-     color:gray;
-     font-size:10px;
-     background-color:#000;
-     
- }
-
- 
- 
-.Where{
-    justify-content: space-around;
-    display:flex;
-    background-color:black;
-    color:gray;
-    width:100%;  
-    text-align:center;
-    align-items: center;
-   
-    
-}
-
-.loading{
-    background-color:#000;
-    color:#FFF;
-    font-weight:bold;
-    font-size:40px;
-    height:100vw;
-    
-}
-
-.searching{
-    height:80px;
-}
-
-
-
-.video{
-    
-    text-align:center;
-}
-
-.gif1{
-    width: 80%;
-    height:37%;   
-}
-#root {
-    text-align:center;
-}
-
-.choose{
-    font-size:10px;
+   padding-top:0;    
 }
 
 .speed{
     display:flex;
-    margin-left:40px;
+    padding-left:20px;
+    padding-top:30px;
 }
 
-.speed button{
-    margin-left:10px;
-    margin-bottom:10px;
+.orbits{
+    padding-left:30px;
 }
 
-.selected{
-    background-color:blue;
+
+.imperial{
+    color:gray;
+    font-size:10px;
+    background-color:#000;
+    border-radius:50%;
 }
+
+.toggle{
+    padding-left:20px;
+}
+
+
+.Where{
+   justify-content: space-around;
+   display:flex;
+   background-color:black;
+   color:gray;
+   width:100%;  
+   text-align:center;
+   align-items: center;    
+}
+
+
+.map{
+    z-index:0;
+    position: relative;
+    flex-grow: 1;    
+}
+
+.map1{
+    height: 300px;
+    width: 100%;  
+}
+
+.choosemap {
+   
+   display:flex;
+   position:absolute;
+   z-index:2000;
+   bottom:10px;
+   left:10px;
+
+
+}
+.choosemap img{
+    border-radius:50%;
+    margin:auto;
+    height:50px;
+    width:50px; 
+}
+
+.choosemap button {
+    background-color: transparent;
+    border-radius:40%;
+    border:none;
+  
+}
+
+ iframe{
+    width:450px;
+    height:290px;
+    
+ }
+
+
+/*responsiveness*/
+
+@media (max-width: 950px){
+    body{
+        display:flex;
+    }
+   
+    .map{
+        height:270px;
+        width:100%;
+        margin-bottom:10px;
+       
+    }
+    .choosemap{
+        display:flex;
+       
+              
+    }
+   
+    .Where{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+       
+        
+    }
+
+    .orbits{
+        font-size:15px;
+        
+      
+    }
+
+    
+   .speed{
+       flex-direction:column;
+       text-align:center;
+       font-size:15px;
+       margin-left:0px!important;
+       color:#FFF;
+   }
+
+   .gif1{
+    height:100%;
+    width:55vh;
+    
+   }   
+
+   
+
+   iframe{
+       padding-top:50px;
+   }
+
+   .loading{
+       margin-top:100px;
+       margin-bottom:200px;
+   }
+}
+
+
+
+/*end of responsiveness*/ 
+
