@@ -1,7 +1,32 @@
-.playBtn {
-    background-color: grey;
+.challenge-container {
+    display:flex;
+}
+
+.challenge-title {
+    display:flex;
+}
+
+.questionBox{
+    display:flex;
+}
+
+.question {
+    display:flex;
 }
 
 .answerBtn {
     background-color: grey;
 }
+
+.score-board {
+    display:flex;
+}
+
+.score {
+    display:flex;
+}
+
+.playBtn {
+    background-color: grey;
+}
+
