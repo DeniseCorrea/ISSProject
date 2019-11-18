@@ -96,9 +96,9 @@
 /*responsiveness*/
 
 @media (max-width: 950px){
-    body{
+    /* body{
         display:flex;
-    }
+    } */
    
     .map{
         height:270px;
