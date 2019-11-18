@@ -156,11 +156,6 @@ h3 {
     h4 {
         display: none;
     }
-
-    .Crew {
-      height: calc(90vh);
-      background-color: black;
-    }
 }
 
 @media (max-width: 740px) {
@@ -169,12 +164,7 @@ h3 {
     }
 } 
 
-@media (max-width: 768px) {
-    .Crew {
-      height: calc(82vh);
-      background-color: black;
-    }
-}
+
 
 /* ul {
     margin: 0;

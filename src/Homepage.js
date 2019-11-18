@@ -2,10 +2,8 @@ import React from 'react';
 import Image from './Image.js'
 
 const Homepage = () => (
-    <div>
-        <div>
-            <Image />
-        </div>
+    <div className='maincontent'>
+        <Image />
     </div>
 );
 
