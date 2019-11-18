@@ -14,9 +14,6 @@
   font-size: 18px;
   text-transform: uppercase;
   margin: 0;
-
-  
-
 }
 
 .CrewList {
@@ -165,30 +162,9 @@ h3 {
 } 
 
 
-
-/* ul {
-    margin: 0;
-    padding: 0;
-    float: center;
-    text-align: center;
+@media (max-width: 750px) {
+  .Crew {
+    min-height: 87vh;
+  }
 }
 
-.Crew{
-    color: black;
-    display: table-cell;
-    vertical-align: middle;
-    list-style: none;
-    justify-content: center ;
-
-    
-}
-
-ul li h2 {
-    padding: .2em 1em;
-    background-color: cadetblue;
-}
-
-ul li h2:hover {
-    color: gray; */
-
-/* } */
