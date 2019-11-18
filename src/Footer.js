@@ -8,7 +8,6 @@ const Footer = () => (
         <div className="footer">
 
             <ul className="contact">
-              <div> <li><NavLink exact to="/Contact" >Contact</NavLink></li></div> 
                 <div><li><NavLink exact to="/Contact" >About us</NavLink></li></div>
             </ul>
 

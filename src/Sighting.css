@@ -30,7 +30,7 @@
     height:100%;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .sighting-board {
         flex-direction: column;
     }
