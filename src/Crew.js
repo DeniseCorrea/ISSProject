@@ -42,19 +42,36 @@ class Crew extends Component {
           CrewInfos: data.people,
           isLoading: false
         });
-      });
+
+      },
+    //   (error) => {
+    //     this.setState({
+    //         isLoading: false,
+    //         isError: true
+    //     });
+    // }
+      
+      
+      );
   };
 
   render() {
     const { CrewInfos, isLoading } = this.state;
 
     if (isLoading) {
-      return <p>Loading</p>;
+      return (
+        <div className='loading'>
+                   <img className='gif1' width='80%' height='35%' src="./img/iss.gif" />
+                   <p className='searching'>SEARCHING...</p>
+               </div>
+           )
     }
+
     return (
       <div className="Crew">
         <div className="CrewTitle">
           <h1>Crew</h1>
+            <p className="subheaderCrew">This is the Crew of ISS right now!</p>
         </div>
         <div className="listing">
           {CrewInfos.map(info => (
