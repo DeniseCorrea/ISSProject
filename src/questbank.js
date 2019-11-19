@@ -2,18 +2,12 @@ const questionsFromQuestBank =
 [ 
     {
         "question": "When was the ISS launched?",
-        "answers": ["1984", "1986", "2019", "2018"],
-        "correct": "1984",
+        "answers": ["1984", "1986", "2009", "1998"],
+        "correct": "1998",
         "questionID": "75846" 
     },
     {
-        "question": "What is the color of Earth?",
-        "answers": ["green", "blue", "red", "yellow"],
-        "correct": "blue",
-        "questionID": "90856" 
-    },
-    {
-        "question": "When was the first step on the moon?",
+        "question": "The first step on the Moon was in _____?",
         "answers": ["1932", "1995", "1969", "2000"],
         "correct": "1969",
         "questionID": "45636" 
@@ -29,6 +23,18 @@ const questionsFromQuestBank =
         "answers": ["8", "34", "16", "25"],
         "correct": "16",
         "questionID": "90382" 
+    },
+    {
+        "question": "Earth is known as the _____ planet.",
+        "answers": ["Green", "Blue", "Black", "White"],
+        "correct": "15",
+        "questionID": "68966" 
+    },
+    {
+        "question": "What is the heigth of the ISS orbit?",
+        "answers": ["408km", "200km", "320km", "570km"],
+        "correct": "480km",
+        "questionID": "90394" 
     }
 ]
 
