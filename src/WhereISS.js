@@ -6,6 +6,7 @@ import './WhereISS.css';
 import DisplayPosition from './DisplayPosition';
 import L from 'leaflet';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -20,6 +21,7 @@ class SimpleExample extends Component {
             speed: 27600,
             speedunits: 'kmh',
             isLoading: true,
+            isError: false
         }
 
     }
@@ -28,13 +30,22 @@ class SimpleExample extends Component {
     getPosition = () => {
         fetch('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json')
             .then(response => response.json())
-            .then(data => {
-                this.setState({
-                    lat: data.iss_position.latitude,
-                    lng: data.iss_position.longitude,
-                    isLoading: false
-                })
-            })
+            .then(
+                (data) => {
+                    this.setState({
+                        lat: data.iss_position.latitude,
+                        lng: data.iss_position.longitude,
+                        isLoading: false,
+                        isError: false
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoading: false,
+                        isError: true
+                    });
+                }
+            )
     }
 
     componentDidMount() {
@@ -99,6 +110,10 @@ class SimpleExample extends Component {
             iconUrl: require('./iss.png'),
             iconSize: [64, 64],
         });
+        let iconError = L.icon({
+            iconUrl: require('./iss-error.png'),
+            iconSize: [64, 64],
+        });
 
 
 
@@ -110,17 +125,19 @@ class SimpleExample extends Component {
                     <DisplayPosition className="display" lat={this.state.lat} lng={this.state.lng} />
                     <p className='orbits'> Orbits per day: 15.54 // Speed: {this.state.speed} {this.state.speedunits}</p>
                     <div className='toggle'>
-                                <BootstrapSwitchButton
-                                    onstyle="outline-dark" offstyle="outline-dark" 
-                                    width={100} height={10}
-                                    checked={false}
-                                    size="xs" 
-                                    onlabel='Imperial'
-                                    offlabel='Metric'
-                                    onChange={this.speedconversion}>
+                        <BootstrapSwitchButton
+                            onstyle="outline-dark" offstyle="outline-dark"
+                            width={100} height={10}
+                            checked={false}
+                            size="xs"
+                            onlabel='Imperial'
+                            offlabel='Metric'
+                            onChange={this.speedconversion}>
 
-                                </BootstrapSwitchButton>
-                            </div>
+                        </BootstrapSwitchButton>
+
+                    </div>
+                    <div><NavLink className='upgrade' exact to="/Globe3d">GO 3D</NavLink></div>
                 </div>
 
                 <div className="Where">
@@ -132,7 +149,7 @@ class SimpleExample extends Component {
                             <TileLayer
                                 url={this.state.url}
                             />
-                            <Marker position={position} icon={icon}>
+                            <Marker position={position} icon={this.state.isError ? iconError : icon}>
 
                                 <Popup>
                                     ISS <br />Real Time
@@ -140,6 +157,7 @@ class SimpleExample extends Component {
                             </Marker>
 
                         </Map>
+
 
                         <div className='choosemap'>
                             <button onClick={this.tileLayer}>
@@ -151,7 +169,7 @@ class SimpleExample extends Component {
                             <button onClick={this.tileLayer3}>
                                 <img src='./img/map1.png' alt='' />
                             </button>
-                           
+
                         </div>
 
                     </div>

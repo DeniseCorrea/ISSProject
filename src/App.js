@@ -8,6 +8,7 @@ import Sighting from './Sighting.js';
 import Crew from './Crew.js';
 import Contact from './Contact.js';
 import Footer from './Footer.js';
+import Globe3D from './Globe3d.js';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/Sighting" component={Sighting} />
         <Route exact path="/Crew" component={Crew} />
         <Route exact path="/Contact" component={Contact} />
+        <Route exact path="/Globe3d" component={Globe3D} />
       </Switch>
       <Footer />
     </HashRouter>

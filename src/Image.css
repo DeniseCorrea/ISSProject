@@ -1,40 +1,60 @@
 .homepage {
     display: flex;
-    flex-direction: column;
-    background-color: black;
+    justify-content:space-around;
+    
 }
 
 .image-picture {
-    margin-left: auto;
-    margin-right: auto;
     padding: 2%;
+
 }
 
 .image-picture img {
-    height: 40vw; 
+    height: 62vh; 
     margin-left: auto;
     margin-right: auto;
-    padding: 0% 2% 0% 2%;;
+    padding: 0% 2% 0% 2%;
 }
 
 .image-title {    
     font-weight: bold;
     text-align: center;
     color: white;
-    padding: 2% 0% 0% 2%;
+   
 }
 
 .homepage-title {
     font-weight: bold;
     text-align: center;
     color: white;
-    padding: 2% 0% 0% 2%;
+
 }
 
 .image-infos {    
     text-align: center;
-    color: white;
-    padding: 0% 2% 0% 2%;
+    color: #FFF;
+    text-align: justify;
+    font-size:15px;
 }
+
+.accordion {
+    color:#b2ebf9!important;
+       
+}
+
+
+
+@media (max-width: 1024px){
+    .homepage{       
+        flex-direction:column;
+        height:150vh;     
+    }
+
+    .image-picture {
+        padding: 0%;
+
+    }
+}
+
 
 
