@@ -1,31 +1,43 @@
 .challenge-container {
-    text-align:center;
+    padding: 6% 20% 4% 20%;
+    display: flex;
+    flex-wrap:wrap; 
+    flex-direction: row;
+    justify-content: space-evenly;   
 }
 
 .questionBox{
-    text-align:center;
+    padding: 4% 8%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    justify-content: space-evenly; 
 }
 
 .question {
-    text-align:center;
-    color: white;
-    padding: 2% 0% 1% 0%;
+    color: black;
+    padding: 8%;
 }
 
 .answerBtn {
     background-color: #b2ebf9;
-    padding: 0.5%; 
+    padding: 0% 10%; 
+    justify-content: center;
+    align-items: center;
 }
 
 .score-board {
-    text-align:center;
+    color: white;
+    padding: 8%;
 }
 
 .score {
-    text-align:center;
+    color:black;
+    padding: 8%;
 }
 
 .playBtn {
+    color: black;
+    padding: 8%;
     background-color: #b2ebf9;
 }
 
