@@ -13,7 +13,7 @@
 
 .maincontent{
   background-color:black;
-  height:calc(100vh - 105px - 65px);
+  min-height:calc(100vh - 105px - 79px);
   width:100%;
 }
 
