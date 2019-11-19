@@ -137,7 +137,8 @@ class SimpleExample extends Component {
                         </BootstrapSwitchButton>
 
                     </div>
-                    <div><NavLink className='upgrade' exact to="/Globe3d">GO 3D</NavLink></div> </div>
+                    <div><NavLink className='upgrade' exact to="/Globe3d">GO 3D</NavLink></div>
+                </div>
 
                 <div className="Where">
 

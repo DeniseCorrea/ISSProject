@@ -115,7 +115,7 @@ iframe{
     .map{
         height:270px;
         width:50vh;
-        margin-bottom:10px;
+     
        
     }
     .choosemap{
@@ -142,10 +142,9 @@ iframe{
     
    .speed{
        flex-direction:column;
-       text-align:center;
        font-size:15px;
-       margin-left:0px!important;
        color:#FFF;
+       justify-content:center;
    }
 
    .gif1{
@@ -167,9 +166,7 @@ iframe{
        margin-bottom:200px;
    }
 
-   .maincontent{
-       justify-content:center;
-   }
+   
 }
 
 
