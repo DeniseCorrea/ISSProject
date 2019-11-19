@@ -47,61 +47,77 @@ class Image extends React.Component {
     subtractDate = () => {
         this.setState({
             imageDate: Moment(this.state.imageDate).subtract(1, 'day'),
-            //isLoading: true
+            isLoading: true
         }, () => this.getImages());
     }
 
     addDate = () => {
         this.setState({
             imageDate: Moment(this.state.imageDate).add(1, 'day'),
-            //isLoading: true
+            isLoading: true
         }, () => this.getImages());
     }
 
     isDisabled = () => {
-       return Moment(Moment(this.state.imageDate).format('YYYY-MM-DD')).isSame(Moment().format('YYYY-MM-DD'));
+        return Moment(Moment(this.state.imageDate).format('YYYY-MM-DD')).isSame(Moment().format('YYYY-MM-DD'));
     }
 
     render() {
         const { isLoading } = this.state;
 
+     
         if (isLoading) {
             return (
-                <div className='loading'>
-
-                    <img className='gif1' width='80%' height='35%' src="./img/iss.gif" alt='' />
-                    <p className='searching'>SEARCHING...</p>
+                <div className="homepage">
+                    <div className="homepage-title">
+                        <h1>FlyBy</h1>
+                        <p className='subtitle'>OUT OF THIS WORLD APP</p>
+                    </div>
+                    <div className='loading'>
+                        <p className='searching'>SEARCHING...</p>
+                    </div>
                 </div>
             )
         }
-
         return (
             <div className="homepage">
                 <div className="homepage-title">
                     <h1>FlyBy</h1>
-                    <p>Out Of This World App</p>
+                    <p className='subtitle'>OUT OF THIS WORLD APP</p>
                 </div>
 
 
                 <div className="image-picture">
-
+                    <button className='previous'onClick={this.subtractDate}>Prev</button>
+                    
+                   
                     {this.state.isVideo ? (
-                        <iframe width="560" height="315" src={this.state.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315"
+                            title="video of the day"
+                            src={this.state.url}
+                            frameborder="0"
+                            allow="accelerometer; 
+                            autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
                     ) : (
-                            <img src={this.state.url} alt='' />
+                            <img src={this.state.url} alt=''/>
                         )}
+                  
+                        <button className='next' onClick={this.addDate} disabled={this.isDisabled()}>Next</button>
+                   
                     <div className="image-title">
-                        <p>Picture of the day: {this.state.title}</p>
+                        <p>APOD: {this.state.title}</p>                                   
                     </div>
-                    <button onClick={this.subtractDate}>Previous</button>
-                    <button onClick={this.addDate} disabled={this.isDisabled()}>Next</button>
+                    
                 </div>
 
                 <div className='accordion'>
-                    <Accordion defaultActiveKey="0">
+                    <Accordion defaultActiveKey="0"style={{maxWidth:'60vh', maxHeight:'40vh'}}>
                         <Card style={{ backgroundColor: 'black' }}>
                             <Card.Header style={{ backgroundColor: 'black' }}>
-                                <Accordion.Toggle className='accordion' style={{ backgroundColor: 'black' }} as={Button} variant="link" eventKey="1">
+                                <Accordion.Toggle className='accordion'
+                                    style={{ backgroundColor: 'black' }}
+                                    as={Button} variant="link" eventKey="1">
                                     Want To Know More?
                             </Accordion.Toggle>
                             </Card.Header>
