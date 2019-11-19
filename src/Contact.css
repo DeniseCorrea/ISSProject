@@ -1,0 +1,8 @@
+.contact-text {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding: 3% 25% 0% 25%;
+    justify-content: center;
+    align-items: center;
+}
