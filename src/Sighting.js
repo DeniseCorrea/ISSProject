@@ -1,6 +1,5 @@
 import React from 'react';
 import './Sighting.css';
-import Moment from 'moment';
 
 class Sighting extends React.Component {
     constructor(props){
@@ -80,9 +79,9 @@ class Sighting extends React.Component {
                             <div className="sighting-subtitle"> Sighting opportunities from your current location </div>
                                     {passTimes.map((passTime) => {
                                     return(
-                                        <div className="sighting-list">
+                                        <div className="sighting-list" key={passTime.risetime}>
                                             <ul>
-                                                <li>{formatRisetime(passTime.risetime)}  Duration: {secondsToMs(passTime.duration)} </li> 
+                                                <li> {formatRisetime(passTime.risetime)}  Duration: {secondsToMs(passTime.duration)} </li> 
                                             </ul>
                                         </div>
                                     )
