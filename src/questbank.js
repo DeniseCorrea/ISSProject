@@ -31,7 +31,7 @@ const questionsFromQuestBank =
         "questionID": "68966" 
     },
     {
-        "question": "What is the heigth of the ISS orbit?",
+        "question": "What is the height of the ISS orbit?",
         "answers": ["408km", "200km", "320km", "570km"],
         "correct": "480km",
         "questionID": "90394" 

@@ -34,11 +34,14 @@ class Challenge extends React.Component {
             <div className="maincontent">
                 <div className="challenge-title">
                     <h1>Challenge</h1>
+                        <div className="challenge-subtitle">
+                            <p>Test your knowledge about space. Don't worry: this is not Rocket Science!</p>
+                        </div>
                         <div className="challenge-container">
                             {this.state.responses < 6 && 
                                 this.state.questions.map (
                                 ({ question, answers, correct, questionID }) => (
-                                    <Card style={{ width: '20rem'}}>
+                                    <Card style={{ width: '20rem', backgroundColor: '#b2ebf9', margin: '2%'}}>
                                     <Card.Body>
                                         <Card.Text>
                                             <QuestionBox 
@@ -54,7 +57,7 @@ class Challenge extends React.Component {
                         )}
 
                         {this.state.responses === 6 ? (
-                             <Card style={{ width: '18 rem'}}>
+                             <Card style={{ width: '18 rem', backgroundColor: '#b2ebf9'}}>
                              <Card.Body>
                                  <Card.Text>
                                      <Result score={this.state.score} playAgain={this.playAgain} />
