@@ -1,4 +1,4 @@
-.loading{
+.loading {
     background-color:#000;
     color:#FFF;
     font-weight:bold;
@@ -6,11 +6,11 @@
 
 }
 
-.gif1{
-    height:60vh;
+.gif1 {
+    height:calc(100vh - 105px - 65px);
 }
 
-.wheretitle{
+.wheretitle {
    text-align:center;
    background-color:black;
    color:#FFF;
@@ -18,49 +18,45 @@
    padding-top:0;    
 }
 
-.speed{
+.speed {
     display:flex;
     padding-left:20px;
     padding-top:30px;
     color:#b2ebf9;
 }
 
-.orbits{
-    padding-left:30px;
+.orbits {
+    padding-left:20px;
+    padding-right:20px;
     color:#b2ebf9;
 }
 
 
-.imperial{
+.imperial {
     color:#b2ebf9;
     font-size:10px;
     background-color:#000;
     border-radius:50%;
 }
 
-.toggle{
-    padding-left:20px;
-}
 
 
-.Where{
+
+.Where {
    justify-content: space-around;
    display:flex;
    background-color:black;
-   color:gray;
    width:100%;  
-   text-align:center;
-   align-items: center;    
+   vertical-align:middle;
 }
 
-
-.map{
+.map {
     z-index:0;
     position: relative;
     flex-grow: 1;    
 }
 
-.map1{
+.map1 {
     height: 300px;
     width: 100%;  
 }
@@ -75,7 +71,7 @@
 
 
 }
-.choosemap img{
+.choosemap img {
     border-radius:50%;
     margin:auto;
     height:50px;
@@ -89,42 +85,38 @@
   
 }
 
-iframe{
+iframe {
     width:450px;
     height:290px;
     
 }
 
-.upgrade{
+.upgrade {
     font-weight:bold;
     color:#b2ebf9!important;
-    padding-left:30px;
-    font-size:30px;
+    font-size:20px;
+    padding:20px;
 }
-
-
-
-
 
 
 /*responsiveness*/
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
     
    
-    .map{
+    .map {
         height:270px;
         width:50vh;
      
        
     }
-    .choosemap{
+    .choosemap {
         display:flex;
        
               
     }
    
-    .Where{
+    .Where {
         display:flex;
         flex-direction:column;
         justify-content:center;
@@ -133,40 +125,39 @@ iframe{
         
     }
 
-    .orbits{
+    .orbits {
         font-size:15px;
+        padding-left:none;
         
       
     }
 
-    
-   .speed{
+           
+   .speed {
        flex-direction:column;
        font-size:15px;
-       color:#FFF;
        justify-content:center;
+       padding-left:none;
    }
 
-   .gif1{
-    
+   .gif1 {    
     height:25vh;
-    
-   }   
+       }   
 
    
 
-   iframe{
+   iframe {
        padding-top:50px;
        width:40vh;
        height:65vh;
    }
 
-   .loading{
+   .loading {
        margin-top:100px;
        margin-bottom:200px;
    }
 
-   
+      
 }
 
 

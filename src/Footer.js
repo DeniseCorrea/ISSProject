@@ -8,7 +8,7 @@ const Footer = () => (
         <div className="footer">
 
             <ul className="contact">
-                <div><li><NavLink exact to="/Contact" >About us</NavLink></li></div>
+                <div><li><NavLink exact to="/Contact" >ABOUT US</NavLink></li></div>
             </ul>
 
             <div className="social">
