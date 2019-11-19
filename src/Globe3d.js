@@ -21,10 +21,10 @@ class Globe3D extends Component {
 
         this.setState({
           position: Cartesian3.fromDegrees(lng, lat, 408000.0),
-          flyTo: Cartesian3.fromDegrees(lng, lat, 8000000.0),
+          flyTo: Cartesian3.fromDegrees(lng, lat, 10000000.0),
         });
       });
-    }, 2000);
+    }, 3000);
   }
 
   toggleIss = () => {
@@ -34,7 +34,7 @@ class Globe3D extends Component {
   render() {
     return (
       <div className='globe'>
-        <Viewer timeline={false} homeButton={false} navigationHelpButton={false} animation={false} style={{ height: 'calc(100vh - 150px)' }}>
+        <Viewer timeline={false} homeButton={false} navigationHelpButton={false} animation={false} style={{ height: 'calc(100vh - 175px)' }}>
           <div style={{ position: 'absolute', top: 150, left: 10 }}>
             <button className='follow' onClick={() => { this.props.history.push('/WhereISS') }}>&lt; Go back</button>
             <button className='back' onClick={this.toggleIss}>{this.state.followIss ? 'Unfollow ISS' : 'Follow ISS'}</button>
