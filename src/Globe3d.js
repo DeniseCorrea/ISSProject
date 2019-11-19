@@ -15,7 +15,7 @@ class Globe3D extends Component {
 
   componentDidMount() {
     setInterval(() => {
-      Resource.fetchJson('https://api.open-notify.org/iss-now.json').then((data) => {
+      Resource.fetchJson('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json').then((data) => {
         var lng = parseFloat(data.iss_position.longitude);
         var lat = parseFloat(data.iss_position.latitude);
 
