@@ -59,7 +59,7 @@ class Image extends React.Component {
     }
 
     isDisabled = () => {
-        return Moment(Moment(this.state.imageDate).format('YYYY-MM-DD')).isSame(Moment().format('YYYY-MM-DD'));
+       return Moment(Moment(this.state.imageDate).format('YYYY-MM-DD')).isSame(Moment().format('YYYY-MM-DD'));
     }
 
     render() {

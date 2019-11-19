@@ -126,7 +126,7 @@ class SimpleExample extends Component {
                     <p className='orbits'> Orbits per day: 15.54 // Speed: {this.state.speed} {this.state.speedunits}</p>
                     <div className='toggle'>
                         <BootstrapSwitchButton
-                            onstyle="outline-dark" offstyle="outline-dark"
+                            onstyle="outline-light" offstyle="outline-light"
                             width={100} height={10}
                             checked={false}
                             size="xs"
