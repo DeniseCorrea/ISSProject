@@ -64,7 +64,7 @@ class NavigationBar extends Component {
                   <ul>
                     <li><NavLink exact to="/WhereISS" activeClassName="selected">ISS</NavLink></li>
                     <li><NavLink exact to="/Challenge" activeClassName="selected">Challenge</NavLink></li>
-                    <li><NavLink exact to="/" activeClassName="active"><img src="https://res.cloudinary.com/dzvkdhu9c/image/upload/v1573582930/ISS/ee100ff4-c375-4258-9e2d-de5ee7240801_200x200_pguolh.png" className="logo"/></NavLink></li>
+                    <li><NavLink exact to="/" activeClassName="active"><img src="https://res.cloudinary.com/dzvkdhu9c/image/upload/v1573582930/ISS/ee100ff4-c375-4258-9e2d-de5ee7240801_200x200_pguolh.png" className="logo" alt=''/></NavLink></li>
                     <li><NavLink exact to="/Sighting" activeClassName="selected">Sighting</NavLink></li>
                     <li><NavLink exact to="/Crew" activeClassName="selected">Crew</NavLink></li>
                   </ul>

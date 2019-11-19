@@ -61,7 +61,7 @@ class Crew extends Component {
     if (isLoading) {
       return (
         <div className='loading'>
-                   <img className='gif1' width='80%' height='35%' src="./img/iss.gif" />
+                   <img className='gif1' width='80%' height='35%' src="./img/iss.gif" alt='' />
                    <p className='searching'>SEARCHING...</p>
                </div>
            )

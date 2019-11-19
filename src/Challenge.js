@@ -22,6 +22,7 @@ class Challenge extends React.Component {
             responses: this.state.responses < 6 ? this.state.responses + 1 : 6
         });
     }
+
     playAgain = () => {
         this.setState({
             score: 0,
@@ -34,38 +35,36 @@ class Challenge extends React.Component {
             <div className="maincontent">
                 <div className="challenge-title">
                     <h1>Challenge</h1>
-                        <div className="challenge-subtitle">
-                            <p>Test your knowledge about space. Don't worry: this is not Rocket Science!</p>
-                        </div>
-                        <div className="challenge-container">
-                            {this.state.responses < 6 && 
-                                this.state.questions.map (
-                                ({ question, answers, correct, questionID }) => (
-                                    <Card style={{ width: '20rem', backgroundColor: '#b2ebf9', margin: '2%'}}>
-                                    <Card.Body>
-                                        <Card.Text>
-                                            <QuestionBox 
-                                            question={question} 
-                                            options={answers} 
-                                            key={questionID}
-                                            selected={answer => this.computeAnswer(answer, correct)}
-                                            />
-                                        </Card.Text>
-                                    </Card.Body>
-                                  </Card>
-                                )
-                        )}
+                </div>
+                <div className="challenge-subtitle">
+                    <p>Test your knowledge about space. Don't worry: this is not Rocket Science!</p>
+                </div>
+                <div className="challenge-container">
+                    {this.state.responses < 6 && 
+                        this.state.questions.map (
+                        ({ question, answers, correct, questionID }) => (
+                            <Card style={{ width: '30%', backgroundColor: 'transparent', margin: '5px'}} key={question}>
+                            <div className="card-body-custom">
+                                    <QuestionBox 
+                                    question={question} 
+                                    options={answers} 
+                                    key={questionID}
+                                    selected={answer => this.computeAnswer(answer, correct)}
+                                    />
+                            </div>
+                            </Card>
+                        )
+                    )}
 
-                        {this.state.responses === 6 ? (
-                             <Card style={{ width: '18 rem', backgroundColor: '#b2ebf9'}}>
-                             <Card.Body>
-                                 <Card.Text>
-                                     <Result score={this.state.score} playAgain={this.playAgain} />
+                    {this.state.responses === 6 ? (
+                            <Card style={{ width: '18 rem', backgroundColor: 'transparent'}}>
+                            <Card.Body>
+                                <Card.Text>
+                                    <Result score={this.state.score} playAgain={this.playAgain} />
                                 </Card.Text>
                             </Card.Body>
-                            </Card>
-                        ) : null}
-                    </div>
+                        </Card>
+                    ) : null}
                 </div>
             </div>
         );
