@@ -1,5 +1,6 @@
 import React from 'react';
 import './Sighting.css';
+import Moment from 'moment';
 
 class Sighting extends React.Component {
     constructor(props){
@@ -11,7 +12,7 @@ class Sighting extends React.Component {
             passes: '',
             datetime: '',
             passTimes: [],
-            isLoading: true     
+            isLoading: true,
         }
     }
 
