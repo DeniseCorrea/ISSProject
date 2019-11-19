@@ -47,13 +47,15 @@
    display:flex;
    background-color:black;
    width:100%;  
-   vertical-align:middle;
+   
 }
 
 .map {
     z-index:0;
     position: relative;
-    flex-grow: 1;    
+    flex-grow: 1;  
+    width:80%;
+   
 }
 
 .map1 {
@@ -85,9 +87,11 @@
   
 }
 
-iframe {
-    width:450px;
+.livestream {
+    width:100%;
     height:290px;
+   
+   
     
 }
 

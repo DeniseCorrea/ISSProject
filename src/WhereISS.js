@@ -176,7 +176,7 @@ class SimpleExample extends Component {
 
                     <div className="video">
 
-                        <iframe src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowFullScreen style={{ "border": "none" }} title="iss"></iframe>
+                        <iframe className='livestream' src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowFullScreen style={{ "border": "none" }} title="iss"></iframe>
                     </div>
 
                 </div>
