@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "020fb38fea830316aea1ae23284bb87e",
+    "revision": "5adaf905775caa936d7967c962309d17",
     "url": "/ISSProject/index.html"
   },
   {
-    "revision": "b1569cb789ae535430c2",
+    "revision": "eef43c3d983d21ef3f89",
     "url": "/ISSProject/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "73af7235f32a3e2e0abe",
-    "url": "/ISSProject/static/css/main.c80d8b3c.chunk.css"
+    "revision": "fadd79b6995ed33c3b85",
+    "url": "/ISSProject/static/css/main.5a9751c3.chunk.css"
   },
   {
-    "revision": "b1569cb789ae535430c2",
-    "url": "/ISSProject/static/js/2.3cdbc361.chunk.js"
+    "revision": "eef43c3d983d21ef3f89",
+    "url": "/ISSProject/static/js/2.631017d4.chunk.js"
   },
   {
-    "revision": "73af7235f32a3e2e0abe",
-    "url": "/ISSProject/static/js/main.57732001.chunk.js"
+    "revision": "fadd79b6995ed33c3b85",
+    "url": "/ISSProject/static/js/main.faadcc53.chunk.js"
   },
   {
     "revision": "8c6428781454bb6d1c1e",
