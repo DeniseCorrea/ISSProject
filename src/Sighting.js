@@ -1,5 +1,6 @@
 import React from 'react';
 import './Sighting.css';
+import Moment from 'moment';
 
 class Sighting extends React.Component {
     constructor(props) {
@@ -57,7 +58,7 @@ class Sighting extends React.Component {
         }
 
         const formatRisetime = (utcSeconds) => {
-            const date = new Date(utcSeconds * 1000);
+            const date = Moment(utcSeconds * 1000).format('DD-MM-YYYY | HH:MM:SS');
             return '' + date;
         }
 
@@ -80,7 +81,7 @@ class Sighting extends React.Component {
                         <ul>
                             {passTimes.map((passTime) => {
                                 return (
-                                    <li key={passTime.risetime}> {formatRisetime(passTime.risetime)}  Duration: {secondsToMs(passTime.duration)} </li>
+                                    <li key={passTime.risetime}> {formatRisetime(passTime.risetime)} | Duration: {secondsToMs(passTime.duration)} </li>
                                 )
                             })}
                         </ul>
