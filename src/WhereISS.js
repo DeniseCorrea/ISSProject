@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
+
 class SimpleExample extends Component {
     constructor(props) {
         super(props);
@@ -55,6 +56,7 @@ class SimpleExample extends Component {
         setInterval(fetchInfo, 8000);
     }
 
+   
     tileLayer = () => {
 
         this.setState({ url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}' })

@@ -2,6 +2,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .sighting-title {
@@ -15,23 +16,31 @@
     font-size: 18px;
     text-transform: uppercase;
     margin: 0;
-    padding: 0px 80px 40px 80px;
+    padding-bottom: 10px;
 }
 
 .sighting-infos {
     width: 50%;
     justify-content: center;
     align-items: center;
-    padding: 60px 80px 20px 80px;
+    padding: 60px 40px;
 }
 
 .sighting-list{
-    padding: 10px 80px;
+    padding: 10px 0;
     color: white;
     text-align: center;
 }
 
-.sighting-list:hover {
+.sighting-list ul {
+    padding: 0;
+}
+.sighting-list li {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.sighting-list li:hover {
     color: #b2ebf9;
  }
 
@@ -50,14 +59,17 @@
 @media (max-width: 1024px) {
     .sighting-board {
         flex-direction: column;
+        justify-content:center;
+        
     }
 
     .sighting-infos {
         width: 100%;
+       
     }
 
     .sighting-div-image {
-        width: 100%;
+       width:100%;
     }
   }
 
