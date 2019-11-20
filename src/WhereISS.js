@@ -53,7 +53,12 @@ class SimpleExample extends Component {
         const fetchInfo = () => {
             this.getPosition();
         };
-        setInterval(fetchInfo, 8000);
+        const intervalID = setInterval(fetchInfo, 8000);
+        this.setState({ intervalID: intervalID });
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.state.intervalID);
     }
 
    
