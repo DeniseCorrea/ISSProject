@@ -29,7 +29,7 @@ const Contact = () => {
             <Card.Title style={ {color: 'white'}}>Raquel Marques</Card.Title>
             <Card.Link href="https://github.com/RaquelMarques97">
               <img
-                src="./GitHub-Mark-120px-plus.png"
+                src="./GitHub-Mark-Light-120px-plus.png"
                 alt=""
                 height="50rem"
               ></img>
@@ -45,7 +45,7 @@ const Contact = () => {
             <Card.Text>
               <Card.Link href="https://github.com/Jxnis">
                 <img
-                  src="./GitHub-Mark-120px-plus.png"
+                  src="./GitHub-Mark-Light-120px-plus.png"
                   alt=""
                   height="50rem"
                 ></img>
@@ -64,7 +64,7 @@ const Contact = () => {
             <Card.Text>
               <Card.Link href="https://github.com/DeniseCorrea">
                 <img
-                  src="./GitHub-Mark-120px-plus.png"
+                  src="./GitHub-Mark-Light-120px-plus.png"
                   alt=""
                   height="50rem"
                 ></img>
