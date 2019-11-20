@@ -27,13 +27,13 @@ const questionsFromQuestBank =
     {
         "question": "Earth is known as the _____ planet.",
         "answers": ["Green", "Blue", "Black", "White"],
-        "correct": "15",
+        "correct": "blue",
         "questionID": "68966" 
     },
     {
         "question": "What is the height of the ISS orbit?",
         "answers": ["408km", "200km", "320km", "570km"],
-        "correct": "480km",
+        "correct": "408km",
         "questionID": "90394" 
     }
 ]
