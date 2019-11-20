@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
+
 class SimpleExample extends Component {
     constructor(props) {
         super(props);
@@ -55,6 +56,7 @@ class SimpleExample extends Component {
         setInterval(fetchInfo, 8000);
     }
 
+   
     tileLayer = () => {
 
         this.setState({ url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}' })
@@ -176,7 +178,7 @@ class SimpleExample extends Component {
 
                     <div className="video">
 
-                        <iframe src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowFullScreen style={{ "border": "none" }} title="iss"></iframe>
+                        <iframe className='livestream' src="https://ustream.tv/embed/9408562?autoplay=true" scrolling="no" allowFullScreen style={{ "border": "none" }} title="iss"></iframe>
                     </div>
 
                 </div>
