@@ -16,10 +16,10 @@ const Contact = () => {
 
       <div className="Wrapper">
         <div className="video">
-          <iframe className="iframeyt"
+          <iframe className="iframeyt" title="iframeYT"
             src={`https://www.youtube.com/embed/nspThRCVV3A`}
-            frameBorder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullScreen
+            frameBorder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
         </div>
 
